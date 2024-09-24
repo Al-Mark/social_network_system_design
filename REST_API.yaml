@@ -1,23 +1,25 @@
+// Добавление друзей
 Request: 
-POST ${address}/users/${user_id}/friend 
+POST ${address}/friendRequest 
 {
-  "Name":...,
-  "Family name":...,
-  "BirthDate":...,
-  "City":...
+  "friend_request_send":...,
+  "friend_request_received":...,
 }
 
 Response:
 200
 
+
+// Удаление друзей
 Request: 
-DELETE ${address}/users/${user_id}/${friend_id} 
+DELETE ${address}/users/${id}/friends/${id} 
 
 Response:
 200
 
+// Просмотр друзей пользователя
 Request: 
-GET ${address}/users/${user_id}/friends 
+GET ${address}/users/${id}/friends 
 
 Response:
 {
@@ -36,31 +38,34 @@ Response:
     }
     ]
 }
-
+// Просмотр анкеты пользователя
 Request: 
-GET ${address}/users/${user_id} 
+GET ${address}/users/${id}/form/${id}
 
 Response:
 {
   "Name":...,
   "Family name":...,
   "BirthDate":...,
-  "City":...
+  "Description":...,
+  "City":...,
+  "Interests":...
 }
 
-
+// Публикация поста в ленту
 Request: 
-POST ${address}/users/${user_id}/news 
+POST ${address}/users/${id}/post 
 {
   "Title":...,
-  "Text":...
+  "body":...
 }
 
 Response:
 200
 
+// Загрузка медиа файлов для постов
 Request: 
-POST ${address}/users/${user_id}/news/${news_id}/media
+POST ${address}/users/${id}/posts/${id}/media
 {
   "Images": [
     {
@@ -97,12 +102,13 @@ POST ${address}/users/${user_id}/news/${news_id}/media
 Response:
 200
 
+// просмотр ленты постов (домашней и пользователей)
 Request: 
-GET ${address}/users/${user_id}/user_news 
+GET ${address}/users/${id}/newsPosts 
 
 Response:
 {
-  "News": [
+  "Posts": [
     {
       "Title":...,
       "Text":...,
@@ -143,8 +149,9 @@ Response:
     ]
 }
 
+// Просмотр новостной ленты пользователя
 Request: 
-GET ${address}/users/${user_id}/news
+GET ${address}/users/${id}/userPosts
 Response:
 {
   "User_id": [
@@ -188,43 +195,57 @@ Response:
                 ]
 }
 
+// просмотр всех чатов пользователя
 Request: 
-GET ${address}/users/${user_id}/chats
+GET ${address}/users/${id}/chats
 Response:
 {
   chats: [
     {
       "id":...,
-      "sender_id":...,
-      "recipient_id":...,
       "date_created":...,
       "reading_status":...,
-      "short_message":...,
-      "attachments":...
+      "chat_partisipants": [
+        {
+          "user_1_id":...,
+          "user_2_id":...,
+          "user_3_id":...
+        }
+      ]
     },
     {
       "id":...,
-      "sender_id":...,
-      "recipient_id":...,
       "date_created":...,
       "reading_status":...,
-      "short_message":...,
-      "attachments":...
+      "chat_partisipants": [
+        {
+          "user_1_id":...,
+          "user_2_id":...,
+          "user_3_id":...
+        }
+      ]
     }
             ]
 }
 
+// просмотр диалога пользователя
 Request: 
-GET ${address}/users/${user_id}/chats/${chat_id}
+GET ${address}/users/${id}/chats/${id}
 
 Response:
 {
       "id":...,
-      "sender_id":...,
-      "recipient_id":...,
       "date_created":...,
       "reading_status":...,
-      "message":...,
+      "messages": [
+        {
+          "id":...,
+          "sender_id:...,
+          "text":...,
+          "status":...,
+          "created_at":...
+        }
+      ],
       "attachments": [
         {
           "file_id":...,
@@ -234,7 +255,7 @@ Response:
                       ]
 }
 
-
+// отправка сообщения
 Request: 
 GET ${address}/messages?message_id=...&sender_id=...&recipient_id=...
 {
