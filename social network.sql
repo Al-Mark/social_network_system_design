@@ -1,3 +1,13 @@
+/* 
+Replication:
+- master-slave (one sync + async)
+- replication factor 3
+
+Sharding:
+- Key based by id
+*/
+  
+
 CREATE TABLE "relations" (
   "following_user_id" integer,
   "followed_user_id" integer,
