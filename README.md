@@ -19,4 +19,11 @@ This project presents the System Design of a social network for the System Desig
 
 # Non-functional requirements
 
-1. 
+1. DAU - 47 600 000
+2. MAU - 72 000 000
+3. Response time на отправку сообщения - 1 с
+4. Response time на получение сообщения - 3 с
+5. Response time на отправку данных (пост/медиа) - 5 с
+6. Response time на получение данных (пост/медиа) - 10 с
+7. Максимальный размер сообщения - 1000 символов
+8. Максимальный размер поста - 1000 символов
