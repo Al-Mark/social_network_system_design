@@ -21,16 +21,16 @@ This project presents the System Design of a social network for the System Desig
 
 1. DAU - 47 600 000
 2. MAU - 72 000 000
-3. Response time for sending massages - 1 s
-4. Response time for receiving massagae - 3 s
+3. Response time for sending messages - 1 s
+4. Response time for receiving messagae - 3 s
 5. Response time for sending data (posts/media) - 5 s
 6. Response time for receiving data (posts/media) - 10 s
-7. Max length for massages - 1000 symbols
+7. Max length for messages - 1000 symbols
 8. Max length for posts - 1000 symbols
 9. We support only users from the CIS
 10. Storage period for messages and all undeleted user data - 5 years
-11. Avarage reading massages for user 20 per day
-12. Avarage sending massages for user 5 per day
+11. Avarage reading messages for user 20 per day
+12. Avarage sending messages for user 5 per day
 13. Avarage reading posts for user 10 per day
 14. Avarage sending posts for user 0,2 per day
 
@@ -67,5 +67,15 @@ Number of HDD with replications and backups = 15
 Number of HDD for 1 replica = 6 
 Number of shards = 1 shard with 2 replicas and 1 backup
 
+
+
+# List of services:
+1. Users
+2. Forms
+3. Massages
+4. Posts
+5. Likes
+6. Relations
+7. Medias
 
 
