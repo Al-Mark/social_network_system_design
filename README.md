@@ -39,13 +39,15 @@ This project presents the System Design of a social network for the System Desig
 For system design I have used C4 model. The C4 model was created as a way to help software development teams describe and communicate software architecture, both during up-front design sessions and when retrospectively documenting an existing codebase. It's a way to create maps of your code, at various levels of detail, in the same way you would use something like Google Maps to zoom in and out of an area you are interested in.
 
 Level 1. System context diagram
+![Social network-System context diagram drawio](https://github.com/user-attachments/assets/280b877d-d13f-466e-9084-c912e26658f7)
 
 
 Level 2. Core system container diagram
+![Uploading Social network-Container diagram.drawio.png…]()
 
 
 
-# Service for massages:
+# Service for messages:
 
 RPS (read) = 47 600 000 * 20 / 86 400 = 11 019
 RPS (write) = 11 019 / 4 = 2 755
