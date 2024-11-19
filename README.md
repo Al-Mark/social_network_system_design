@@ -52,8 +52,9 @@ For system design I have used C4 model. The C4 model was created as a way to hel
 
 
 
-# Service for messages:
+# Basic calculations:
 
+**for messages service**
 RPS (read) = 47 600 000 * 20 / 86 400 = 11 019
 RPS (write) = 11 019 / 4 = 2 755
 
@@ -69,7 +70,7 @@ Number of HDD with replications and backups = 334
 Number of HDD for 1 replica = 134
 Number of shards = 24 shards with 2 replicas and 1 backup
 
-# Service for posts:
+**For post service**
 RPS (read) = 47 600 000 * 10 / 86 400 = 5 509
 RPS (write) = 5 509 / 50 = 110
 
@@ -84,16 +85,4 @@ HDD = 6 TB
 Number of HDD with replications and backups = 15
 Number of HDD for 1 replica = 6 
 Number of shards = 1 shard with 2 replicas and 1 backup
-
-
-
-# List of services:
-1. Users profiles
-2. Massages
-3. Posts
-4. Feeds
-5. Relations
-6. Medias
-7. Notifications
-
 
