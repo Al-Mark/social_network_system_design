@@ -47,7 +47,8 @@ Level 1. System context diagram
 Level 2. Core system container diagram
 
 
-![Uploading Social network-Container diagram.drawio.png…]()
+![Social network-Container diagram](https://github.com/user-attachments/assets/a10cb1d1-2a5f-4690-9fa5-b29d3f4d94f0)
+
 
 
 
