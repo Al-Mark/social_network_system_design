@@ -34,6 +34,17 @@ This project presents the System Design of a social network for the System Desig
 13. Avarage reading posts for user 10 per day
 14. Avarage sending posts for user 0,2 per day
 
+# Design overview
+
+For system design I have used C4 model. The C4 model was created as a way to help software development teams describe and communicate software architecture, both during up-front design sessions and when retrospectively documenting an existing codebase. It's a way to create maps of your code, at various levels of detail, in the same way you would use something like Google Maps to zoom in and out of an area you are interested in.
+
+Level 1. System context diagram
+
+
+Level 2. Core system container diagram
+
+
+
 # Service for massages:
 
 RPS (read) = 47 600 000 * 20 / 86 400 = 11 019
@@ -70,12 +81,12 @@ Number of shards = 1 shard with 2 replicas and 1 backup
 
 
 # List of services:
-1. Users
-2. Forms
-3. Massages
-4. Posts
-5. Likes
-6. Relations
-7. Medias
+1. Users profiles
+2. Massages
+3. Posts
+4. Feeds
+5. Relations
+6. Medias
+7. Notifications
 
 
